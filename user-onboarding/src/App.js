@@ -6,13 +6,14 @@ import axios from 'axios'
 
 import * as yup from 'yup'  // Libary for form validation
 import schema from './validation/formSchema.js'
+import Form from './components/Form'
 
 // Initial States
 const initialFormValues = {
   // Text Inputs
   name: '',
   email: '',
-  username: '',
+  // username: '',
   password: '',
 
   // checkbox
@@ -22,7 +23,7 @@ const initialFormValues = {
 const initialFormErrors = {
   name: '',
   email: '',
-  username: '',
+  // username: '',
   password: '',
 }
 
@@ -40,7 +41,6 @@ function App() {
     axios.get('https://reqres.in/api/users')
     .then(res => {
       console.log(res.data.data)
-
       setUsers(res.data.data)
     })
     .catch(err => {
@@ -95,7 +95,7 @@ function App() {
     const newUser = {
       name: formValues.name.trim(),
       email: formValues.email.trim(),
-      username: formValues.username.trim(),
+      // username: formValues.username.trim(),
       password: formValues.password.trim(),
       terms: formValues.terms
     }
@@ -116,6 +116,13 @@ function App() {
     <div className="container">
         <h1>Form</h1>
 
+        {/* <div className='errors'>
+          <div>{errors.name}</div>
+          <div>{errors.email}</div>
+          <div>{errors.password}</div>
+          <div>{errors.terms}</div>
+        </div> */}
+
         <form onSubmit={submit}>
           <input 
             name="name"
@@ -133,13 +140,13 @@ function App() {
           placeholder="Email"
           />
 
-          <input 
+          {/* <input 
           name="username"
           type="text"
           value={formValues.username}
           onChange={change}
           placeholder="Username"
-          />
+          /> */}
 
           <label htmlFor="Password"></label>
           <input
@@ -158,7 +165,7 @@ function App() {
           onChange={change}
           />
           
-        <button>Submit</button>
+        <button disabled={disabled}>Submit</button>
 
         </form>
 

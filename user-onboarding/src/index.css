@@ -39,3 +39,17 @@ button {
   background-color: rgb(194, 185, 56);
   color: black;
 }
+
+button:hover {
+  background-color: rgb(235, 226, 110);
+}
+
+.user-card {
+  color: lightgrey;
+  border: 1px solid rgb(63, 63, 63);
+  padding: 10px;
+  margin:auto;
+  width: 50%;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
