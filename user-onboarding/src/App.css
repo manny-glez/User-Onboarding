@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  background-color: black;
+  padding: 20px;
+  margin: 0;
+  color: white;
+}
+
+#sign-up {
+  background-color: rgb(132, 233, 228);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1464692805480-a69dfaafdb0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  width: 510px;
+  margin: auto;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+  box-shadow: 0 -1px 0 #c0c0c0, 0 0 4px rgba(0, 0, 0, 0.12),
+  0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-container {
+  margin-top: 100px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 -1px 0 #ffffff, 0 0 4px rgba(0, 0, 0, 0.12),
+  0 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  width: 500px;
+  margin: auto;
+  border-radius: 0 0 10px 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+input {
+  padding: 5px;
+}
+
+label {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between;
+  color: black;
+}
+
+button {
+  width: 50%;
+  margin: auto;
+  padding: 5px;
+}
+
+.user-card {
+  border: solid lightgrey 1px;
+  border-radius: 6px;
+  box-shadow: 0 -1px 0 #ffffff, 0 0 4px rgba(0, 0, 0, 0.12),
+  0 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 70%;
+    border-radius: 10px;
+  }
+  #sign-up {
+    display: none;
+  }
+
+}
