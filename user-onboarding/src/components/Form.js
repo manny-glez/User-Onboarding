@@ -110,7 +110,7 @@ function Form() {
           />
         </label>
 
-        <button disabled={disabled}>Join</button>
+        <button id="submitBtn" disabled={disabled}>Join</button>
       </form>
 
       </div>
